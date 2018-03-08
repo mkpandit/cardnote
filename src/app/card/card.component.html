@@ -1,3 +1,4 @@
+<app-sidebar></app-sidebar>
 <h2>My Cards</h2>
 <ul class="heroes">
   <li *ngFor="let card of cards" (click)="onSelect(card)" [class.selected]="card === selectedCard">
@@ -7,7 +8,8 @@
 
 
 <div *ngIf="selectedCard">
-	<h2>{{ selectedCard.name | uppercase }} Details</h2>
+	<h2>{{ selectedCard.name }} Details</h2>
 	<div><span>id: </span>{{selectedCard.id}}</div>
-	<div>{{ selectedCard.description }}</div>
+	<div>Description: {{ selectedCard.description }}</div>
+	<div>Execution date: {{ selectedCard.exe_date }}</div>
 </div>
