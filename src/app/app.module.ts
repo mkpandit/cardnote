@@ -8,6 +8,7 @@ import { CardComponent } from './card/card.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CardDetailComponent } from './card-detail/card-detail.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     CardComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    CardDetailComponent
   ],
   imports: [
     BrowserModule,

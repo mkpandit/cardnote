@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Card } from '../cards';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-card-detail',
+  templateUrl: './card-detail.component.html',
+  styleUrls: ['./card-detail.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardDetailComponent implements OnInit {
 	
 	cards = [
 		{ id: 11, name: 'Card 11', description: 'This is description for 11', exe_date: '2018-0101' },
@@ -20,16 +20,13 @@ export class CardComponent implements OnInit {
 		{ id: 19, name: 'Card 19', description: 'This is description for 19', exe_date: '2018-0101' },
 		{ id: 20, name: 'Card 20', description: 'This is description for 20', exe_date: '2018-0101' }
 	];
-	
-	selectedCard: Card;
+
+	@Input() card: Card;
 
 	constructor() { }
 
 	ngOnInit() {
-	}
-	
-	onSelect(card: Card): void {
-		this.selectedCard = card;
+		
 	}
 
 }
