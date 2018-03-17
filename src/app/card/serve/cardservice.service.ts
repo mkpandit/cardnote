@@ -22,5 +22,12 @@ export class CardserviceService {
 			exe_date: exe_date
 		});
 	}
-
+	editCardNote($key: string, name: string, description: string, exe_date: string) {
+		console.log("Edit");
+		this.cardNoteList.update($key, { name: name, description: description, exe_date: exe_date});
+	}
+	
+	deleteCardNote($key: string) {
+	  this.cardNoteList.remove($key);
+	}
 }
