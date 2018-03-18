@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Card } from '../../cards';
 
 @Injectable()
 export class CardserviceService {
@@ -22,6 +23,7 @@ export class CardserviceService {
 			exe_date: exe_date
 		});
 	}
+	
 	editCardNote($key: string, name: string, description: string, exe_date: string) {
 		console.log("Edit");
 		this.cardNoteList.update($key, { name: name, description: description, exe_date: exe_date});
