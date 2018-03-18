@@ -1,9 +1,22 @@
-<app-sidebar></app-sidebar>
-<h2>My Cards</h2>
-<ul class="cards">
-  <li *ngFor="let card of cards" [class.selected]="card === selectedCard" (click)="onSelect(card)">
-    <span class="badge">{{card.id}}</span> {{card.name}}
-  </li>
-</ul>
+<!-- <app-sidebar></app-sidebar> -->
+<h4>Card Board</h4>
+<div class="container-fluid">
+	<div class="row">
+		<div class="card card-with-margin" style="width: 18rem;" 
+			*ngFor="let card of cardNoteListArray" 
+			[class.selected]="card === selectedCard" 
+			(click)="onSelect(card)">
+			<div class="card-body">
+				<h5 class="card-title">{{ card.name }}</h5>
+				<p class="card-text">{{ card.description }}</p>
+				<button type="button" class="btn btn-outline-secondary">{{ card.exe_date }}</button>
+				<span class="hover-cursor text-danger pull-right"
+				(click)="deleteCard(card.$key)">
+				<i class="fa fa-trash-o fa-lg"></i>
+			</span>
+			</div>
+		</div>
+	</div>
+</div>
 
 <app-card-detail [card]="selectedCard"></app-card-detail>
