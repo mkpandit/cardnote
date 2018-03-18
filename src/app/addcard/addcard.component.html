@@ -1,0 +1,11 @@
+<h4>Add Card</h4>
+<div class="input-group">
+	<input type="text" class="form-control" #cardId>
+	<input type="text" class="form-control" #cardName>
+	<input type="text" class="form-control" #cardDescription>
+	<input type="text" class="form-control" #cardExeDate>
+	<div class="input-group-addon hover-cursor"
+		(click) = "addCard(cardId, cardName, cardDescription, cardExeDate)">
+		<i class="fa fa-plus-circle fa-2x"></i>
+	</div>
+</div>
