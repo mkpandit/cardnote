@@ -1,6 +1,10 @@
-<div *ngIf="card">
-	<h2>{{ card.name }} Details</h2>
-	<div><span>ID: </span>{{card.id}}</div>
-	<div>Description: {{ card.description }}</div>
-	<div>Execution date: {{ card.exe_date }}</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="alert alert-success alert-full-width" role="alert" *ngIf="card">
+			<h4>Card Details</h4>
+			<p><span>Title: </span>{{card.name}} <span class="badge badge-info">{{card.id}}</span></p>
+			<p>Description: {{ card.description }}</p>
+			<p>Execution date: {{ card.exe_date }}</p>
+		</div>
+	</div>
 </div>
